@@ -58,10 +58,11 @@ while True:
 		for card in card_infor:
 			if card['name'] == search_name:
 				print(card)
-				flag += 1
+#				flag += 1
 				break
-		if flag == 0:
-				print("There is not a data about %s."%search_name)
+#		if flag == 0:
+		else:
+			print("There is not a data about %s."%search_name)
 	elif num==5:
 		print("%s\t%s\t%s\t%s"%("name", "qq", "wechat", "addr"))
 		for card in card_infor:
