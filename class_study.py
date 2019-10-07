@@ -3,6 +3,7 @@ class Cat():
 		self.name = name
 		self.age = age
 		self.left_hp = left_hp
+		self.item = []
 
 	def __str__(self):
 		return("class information: name: %s, age: %d"%(self.name, self.age))
@@ -10,11 +11,14 @@ class Cat():
 		print("eating..")
 		self.left_hp += food.value
 		if self.left_hp < 10:
+			self.item.append(food.name)
 			print("I am famished, deading...")
 		elif 10 <= self.left_hp < 80:
+			self.item.append(food.name)
 			print("I ate %s, but i'm still hangry."%food.name)
 		elif self.left_hp >= 80:
-			print("I'm full. Thank you for having me. current_hp=%d"%self.left_hp)
+			self.item.append(food.name)
+			print("I'm full. Thank you for having me. I ate %s, current_hp=%d"%(str(self.item), self.left_hp))
 
 	def introduce(self):
 		print("My name is %s, %d years old."%(self.name, self.age))
