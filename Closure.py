@@ -1,12 +1,15 @@
-def make_line_equation(x):
-	def tell_u_y(givemea, givemeb):
-		return givemea*x + givemeb
+def make_line_equation(a, b):
+	def tell_u_y(givemex):
+		return a*givemex + b
 
 	return tell_u_y
 
+a = 1
+b = 1
+# 给出a, b算出函数的斜率 slope, 确定函数
+line = make_line_equation(a, b)
+# 给x求y
 x = 5
-line = make_line_equation(x)
-# 给出a, b算出函数的斜率 slope
-y = line(1, 1)
+y = line(x)
 
-print("y is %d, when x=%d by using line."%(y, x))
+print("y=%d, when x=%d by using y=%dx+%d."%(y, x, a, b))
