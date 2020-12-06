@@ -3,7 +3,7 @@ import struct
 from socket import *
 
 clientSocket = socket(AF_INET, SOCK_STREAM)
-clientSocket.connect(("127.0.0.1", 8899))
+clientSocket.connect(("192.168.3.7", 8899))
 
 sendData = struct.pack("!H", 123)
 clientSocket.send(sendData)
