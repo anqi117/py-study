@@ -17,3 +17,7 @@ clientSocket, clientInfo = serverSocket.accept()
 recvData = clientSocket.recv(1024)
 
 print("%s, %s"%(str(clientInfo), recvData)) 
+
+# close
+clientSocket.close()
+serverSocket.close()
